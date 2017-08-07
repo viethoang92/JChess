@@ -9,10 +9,8 @@ import java.util.Map;
 
 public abstract class Tile {
 
-    protected final int tileCoordinate;
-
+    // Properties
     private static final Map<Integer, EmptyTile> EMPTY_TILES_CACHE = createAllPossibleEmptyTiles();
-
     private static Map<Integer, EmptyTile> createAllPossibleEmptyTiles() {
         final Map<Integer, EmptyTile> emptyTileMap = new HashMap<>();
 
@@ -23,17 +21,21 @@ public abstract class Tile {
         return Collections.unmodifiableMap(emptyTileMap);
     }
 
-    public static Tile createTile(final int tileCoordinate, final Piece piece) {
-        return piece != null ? new OccupiedTile(tileCoordinate, piece) : EMPTY_TILES_CACHE.get(tileCoordinate);
-    }
+    protected final int tileCoordinate;
 
+    public abstract boolean isTileOccupied();
+    public abstract Piece getPiece();
+
+    // Constructor
     Tile(int tileCoordinate) {
         this.tileCoordinate = tileCoordinate;
     }
 
-    public abstract boolean isTileOccupied();
+    // Methods
+    public static Tile createTile(final int tileCoordinate, final Piece piece) {
+        return piece != null ? new OccupiedTile(tileCoordinate, piece) : EMPTY_TILES_CACHE.get(tileCoordinate);
+    }
 
-    public abstract Piece getPiece();
 
     public static final class EmptyTile extends Tile {
 
