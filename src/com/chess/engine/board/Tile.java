@@ -11,15 +11,6 @@ public abstract class Tile {
 
     // Properties
     private static final Map<Integer, EmptyTile> EMPTY_TILES_CACHE = createAllPossibleEmptyTiles();
-    private static Map<Integer, EmptyTile> createAllPossibleEmptyTiles() {
-        final Map<Integer, EmptyTile> emptyTileMap = new HashMap<>();
-
-        for(int i=0; i<64; i++) {
-            emptyTileMap.put(i, new EmptyTile(i));
-        }
-
-        return Collections.unmodifiableMap(emptyTileMap);
-    }
 
     protected final int tileCoordinate;
 
@@ -32,11 +23,21 @@ public abstract class Tile {
     }
 
     // Methods
+    private static Map<Integer, EmptyTile> createAllPossibleEmptyTiles() {
+        final Map<Integer, EmptyTile> emptyTileMap = new HashMap<>();
+
+        for(int i=0; i<64; i++) {
+            emptyTileMap.put(i, new EmptyTile(i));
+        }
+
+        return Collections.unmodifiableMap(emptyTileMap);
+    }
+
     public static Tile createTile(final int tileCoordinate, final Piece piece) {
         return piece != null ? new OccupiedTile(tileCoordinate, piece) : EMPTY_TILES_CACHE.get(tileCoordinate);
     }
 
-
+    //EmptyTile Class
     public static final class EmptyTile extends Tile {
 
         private EmptyTile(final int coordinate) {
@@ -54,6 +55,7 @@ public abstract class Tile {
         }
     }
 
+    //OccupiedTile Class
     public static final class OccupiedTile extends Tile {
 
         private final Piece pieceOnTile;
