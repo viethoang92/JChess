@@ -11,9 +11,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+import static com.chess.engine.board.Move.*;
+
 public class Bishop extends Piece{
 
-    private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES =  { -9, -7, 7, 9};
+    private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES =  { -9, -7, 7, 9 };
 
 
     Bishop(int piecePosition, Alliance pieceAlliance) {
@@ -29,7 +31,7 @@ public class Bishop extends Piece{
     // if Coordinate is not Occupied, add Coordinate to legalMoves as a MajorMove
     // else add Coordinate to legalMoves as an AttackMove
     @Override
-    public Collection<Move> calculateLegalMoves(Board board) {
+    public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>();
 
@@ -46,12 +48,12 @@ public class Bishop extends Piece{
                     // almost same as Knight
                     final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
                     if(!candidateDestinationTile.isTileOccupied()) {
-                        legalMoves.add(new Move.MajorMove(board, this, candidateDestinationCoordinate));
+                        legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
                     } else {
                         final Piece pieceAtDestination = candidateDestinationTile.getPiece();
                         final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
                         if(this.pieceAlliance != pieceAlliance) {
-                            legalMoves.add(new Move.AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
+                            legalMoves.add(new AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
                         }
                         break;
                     }
