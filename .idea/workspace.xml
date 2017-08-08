@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="660927d9-9f97-4a8c-be1f-d01ec28d7f03" name="Default" comment="#4 Alliance Class Update, Creating Knight Class">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Tile.java" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Tile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +18,8 @@
       <file leaf-file-name="Tile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/chess/engine/board/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createAllPossibleEmptyTiles#0;class#Tile#0" expanded="false" />
@@ -32,8 +29,6 @@
                 <element signature="e#1197#1198#0" expanded="true" />
                 <element signature="e#1258#1259#0" expanded="true" />
                 <element signature="e#1294#1295#0" expanded="true" />
-                <element signature="e#1347#1348#0" expanded="true" />
-                <element signature="e#1382#1383#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -435,7 +430,7 @@
       <option name="presentableId" value="Default" />
       <updated>1495434994134</updated>
       <workItem from="1502137894825" duration="5030000" />
-      <workItem from="1502146844328" duration="3305000" />
+      <workItem from="1502146844328" duration="3693000" />
     </task>
     <task id="LOCAL-00001" summary="#2 createTile Tile and Collections.UnmodifiableMap">
       <created>1502147064298</created>
@@ -476,7 +471,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8335000" />
+    <option name="totallyTimeSpent" value="8723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="843" y="21" width="1025" height="990" extended-state="0" />
@@ -547,8 +542,6 @@
             <element signature="e#1197#1198#0" expanded="true" />
             <element signature="e#1258#1259#0" expanded="true" />
             <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -578,8 +571,6 @@
             <element signature="e#1197#1198#0" expanded="true" />
             <element signature="e#1258#1259#0" expanded="true" />
             <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -597,8 +588,6 @@
             <element signature="e#1197#1198#0" expanded="true" />
             <element signature="e#1258#1259#0" expanded="true" />
             <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -656,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chess/engine/board/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="189">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createAllPossibleEmptyTiles#0;class#Tile#0" expanded="false" />
@@ -667,8 +656,6 @@
             <element signature="e#1197#1198#0" expanded="true" />
             <element signature="e#1258#1259#0" expanded="true" />
             <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
           </folding>
         </state>
       </provider>
