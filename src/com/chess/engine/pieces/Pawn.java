@@ -7,6 +7,7 @@ import com.chess.engine.board.Move;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import static com.chess.engine.board.Move.*;
@@ -67,6 +68,6 @@ public class Pawn extends Piece{
             }
         }
 
-        return null;
+        return Collections.unmodifiableList(legalMoves);
     }
 }
