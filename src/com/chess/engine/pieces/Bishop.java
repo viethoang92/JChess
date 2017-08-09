@@ -39,6 +39,7 @@ public class Bishop extends Piece{
         for(final int candidateCoordinateOffset: CANDIDATE_MOVE_VECTOR_COORDINATES) {
             int candidateDestinationCoordinate = this.piecePosition;
             while(BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)){
+
                 if(isFirstColumnExclusion(candidateDestinationCoordinate, candidateCoordinateOffset) ||
                         isEighthColumnExclusion(candidateDestinationCoordinate, candidateCoordinateOffset)) {
                     break;
