@@ -3,19 +3,37 @@ package com.chess.engine.board;
 import com.chess.engine.Alliance;
 import com.chess.engine.pieces.*;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Board {
 
     private final List<Tile> gameBoard;
+    private final Collection<Piece> whitePieces;
+    private final Collection<Piece> blackPieces;
 
 
     // Constructor
     private Board(Builder builder) {
         this.gameBoard = createGameBoard(builder);
+        this.whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE);
+        this.blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK);
+    }
+
+    private Collection<Piece> calculateActivePieces(final List<Tile> gameBoard,
+                                                    final Alliance alliance) {
+        final List<Piece> activePieces = new ArrayList<>();
+
+        for(final Tile tile : gameBoard) {
+            if(tile.isTileOccupied()) {
+                final Piece piece = tile.getPiece();
+                if(piece.getPieceAlliance() == alliance) {
+                    activePieces.add(piece);
+                }
+            }
+        }
+
+        return Collections.unmodifiableList(activePieces);
+
     }
 
     public Tile getTile(final int tileCoordinate) {
