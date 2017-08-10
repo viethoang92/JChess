@@ -9,10 +9,12 @@ import java.util.List;
 
 public abstract class Piece {
 
+    // Properties
     protected final int piecePosition;
     protected final Alliance pieceAlliance;
     protected final boolean isFirstMove;
 
+    // Constructor
     Piece(final int piecePosition, final Alliance pieceAlliance) {
         this.pieceAlliance = pieceAlliance;
         this.piecePosition = piecePosition;
@@ -20,6 +22,10 @@ public abstract class Piece {
         this.isFirstMove = false;
     }
 
+    // Getters
+    public int getPiecePosition() {
+        return this.piecePosition;
+    }
     public Alliance getPieceAlliance() {
         return this.pieceAlliance;
     }
