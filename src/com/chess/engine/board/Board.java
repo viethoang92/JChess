@@ -35,11 +35,6 @@ public class Board {
         return builder.toString();
     }
 
-    private String prettyPrint(final Tile tile) {
-        return tile.toString();
-    }
-
-
     private Collection<Move> calculateLegalMoves(Collection<Piece> pieces) {
         final List<Move> legalMoves = new ArrayList<>();
         for(final Piece piece : pieces) {
@@ -120,13 +115,14 @@ public class Board {
         return builder.build();
     }
 
+    // Builder
     public static class Builder {
 
         Map<Integer, Piece> boardConfig;
         Alliance nextMoveMaker;
 
         public Builder() {
-
+            this.boardConfig = new HashMap<>();
         }
 
         public Builder setPiece(final Piece piece) {

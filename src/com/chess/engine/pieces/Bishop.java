@@ -65,6 +65,11 @@ public class Bishop extends Piece{
         return Collections.unmodifiableList(legalMoves);
     }
 
+    @Override
+    public String toString() {
+        return PieceType.BISHOP.toString();
+    }
+
     private static boolean isFirstColumnExclusion(final int currentPosition, final int candidateOffset) {
         return BoardUtils.FIRST_COLUMN[currentPosition] && (candidateOffset == -9 || candidateOffset == 7);
     }
